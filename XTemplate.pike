@@ -121,7 +121,8 @@ public void parse(string b)
         input = input[pos+len..];
         pos   = search(input, tag_end_delim);
         // Append already parsed, found block
-        buf  += parsed_blocks[ input[..pos-1] ];
+        if (parsed_blocks[ input[..pos-1] ])
+            buf  += parsed_blocks[ input[..pos-1] ];
         input = input[pos+1..];
         // Reset pos, since we shift input,
         // otherwise it might seek out of range
