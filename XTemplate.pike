@@ -102,9 +102,8 @@ public void parse(string b)
     string input;
     string buf = "";
     int pos;
-    if (parsed_blocks[b])
-        return;
-    else if (blocks[b])
+
+    if (blocks[b])
         input = blocks[b];
     else if (ignore_missing)
         set_error("parse: block [%s] does not exist", b);
