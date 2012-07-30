@@ -88,7 +88,7 @@ public string text(void|string block)
 
     if (parsed_blocks[block])
         return parsed_blocks[block];
-    return 0;
+    return "";
 }
 
 public void rparse(string b)
